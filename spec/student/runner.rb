@@ -1,6 +1,8 @@
 require_relative 'student'
 
-test_student = Student.new("Ken", "Corley")
+test_student1 = Student.new("Ken", "Corley")
+test_student2 = Student.new("Jane", "Doe")
+test_student3 = Student.new("John", "Doe")
 
-puts test_student.first_name
-puts test_student.last_name
+
+
