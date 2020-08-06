@@ -23,4 +23,8 @@ class Product
     @@products.select{ |product| product.quantity == 0 }
   end
 
+  def self.total_value
+    @@products.reduce(0) { |acc, product| acc + product.quantity * product.price }
+  end
+
 end

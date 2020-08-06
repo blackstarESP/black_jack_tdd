@@ -47,4 +47,8 @@ RSpec.describe Product do
     expect(Product.products_to_order).to eq([p3])
   end
 
+  it "returns the total value of all products" do
+    expect(Product.total_value).to eq(3 * 25 + 5 * 15 + 0 * 30)
+  end
+
 end
