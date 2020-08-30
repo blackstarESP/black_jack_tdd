@@ -1,7 +1,7 @@
 require_relative 'card'
 
 RSpec.describe Card do
-  
+
   before do
     suit = "Diamonds"
     rank = "8"
@@ -31,6 +31,15 @@ RSpec.describe Card do
 
   it "'rank' method returns '8'" do
     expect(@card.rank).to eq('8')
+  end
+
+  it "outputs rank and suit if show is true" do
+    expect("#{@card}").to eq("#{@card.rank} of #{@card.suit}")
+  end
+
+  it "doesn't output rank and suit if show is false" do
+    @card.show = false
+    expect("#{@card}").to eq("")
   end
 
 end
